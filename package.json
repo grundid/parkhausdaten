@@ -1,0 +1,31 @@
+{
+  "name": "parkhausdaten",
+  "version": "0.0.1",
+  "description": "Parkhausdaten",
+  "main": "scraper.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "scraper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opendata-heilbronn/parkhausdaten-heilbronn.git"
+  },
+  "keywords": [
+    "parkhaus",
+    "carpark",
+    "data",
+    "open-data",
+    "scraper",
+    "nodejs"
+  ],
+  "author": "Adrian + Leandro",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "moment": "^2.18.1",
+    "request": "^2.81.0"
+  }
+}
