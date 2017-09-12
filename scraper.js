@@ -1,8 +1,8 @@
 const request = require('request');
 const scr = require('./scrape');
 
-const inputUrl = process.env.INPUT_URL;
-const outputUrl = process.env.OUTPUT_URL;
+const inputUrl = process.env.MORPH_INPUT_URL;
+const outputUrl = process.env.MORPH_OUTPUT_URL;
 
 request(inputUrl, (error, response, html) => {
     if (!error && response.statusCode === 200) {
