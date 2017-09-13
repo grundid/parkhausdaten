@@ -27,7 +27,6 @@ function scrapeData() {
 
 if (inputUrl && outputUrl) {
     scrapeData();
-    setInterval(scrapeData, 6 * 60 * 1000);
 } else {
     console.log("Config missing: ", inputUrl, " out: ", outputUrl);
 }
