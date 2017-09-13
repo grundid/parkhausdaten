@@ -5,7 +5,7 @@ const inputUrl = process.env.MORPH_INPUT_URL;
 const outputUrl = process.env.MORPH_OUTPUT_URL;
 
 function scrapeData() {
-    console.log("Running update");
+    console.log("Running update ", new Date());
     request(inputUrl, (error, response, html) => {
         if (!error && response.statusCode === 200) {
             const result = scr.scrape(html);
@@ -14,7 +14,6 @@ function scrapeData() {
                 method: 'POST',
                 json: result
             };
-            console.log("Data to send: ", result);
             request(opts, (err, res, body) => {
                 if (err) {
                     console.log("Error: ", err);
