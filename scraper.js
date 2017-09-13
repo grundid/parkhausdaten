@@ -14,8 +14,13 @@ function scrapeData() {
                 method: 'POST',
                 json: result
             };
+            console.log("Data to send: ", result);
             request(opts, (err, res, body) => {
-                console.log("Done");
+                if (err) {
+                    console.log("Error: ", err);
+                } else {
+                    console.log("Done: ", res.statusCode);
+                }
             })
         }
     });
