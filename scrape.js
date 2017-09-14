@@ -8,8 +8,9 @@ function scrape(html) {
     updateTime = updateTime
         .replace("Datum: ", "")
         .replace(" - Uhrzeit: ", " ");                                      //quite dirty method, but should work
-    let t = moment(updateTime, 'DD.MM.YYYY HH:mm');                         //parse update time
-    result.time = t.utc().unix();
+    let time = moment(updateTime, 'DD.MM.YYYY HH:mm').utc();                         //parse update time
+    result.time = time.unix();
+    result.timeString = time.format();
 
     $('div.carparkContent').each(function (i, element) {                      //loop thorugh all carpark elements
         let location = $(this).find('.carparkLocation > a').text();           //extract carpark name
