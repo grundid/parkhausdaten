@@ -11,6 +11,7 @@ function scrape(html) {
     let time = moment(updateTime, 'DD.MM.YYYY HH:mm').utc();                         //parse update time
     result.time = time.unix();
     result.timeString = time.format();
+    result.updateTimeString = moment().utc().format();
 
     $('div.carparkContent').each(function (i, element) {                      //loop thorugh all carpark elements
         let location = $(this).find('.carparkLocation > a').text();           //extract carpark name
